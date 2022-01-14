@@ -1,0 +1,28 @@
+<div>
+    <top-bar (searchValueEmit)="searchRestaurant($event)" (openSearchFilterEmit)="openSearchFilter($event)"
+        [type]="type" [filterCount]="filterCount"></top-bar>
+    <div *ngIf="showListLoader" id="about" class="skeleton loader-height"></div>
+    <div *ngIf="!showListLoader">
+        <div class="category-head">
+            <h5 class="category-heading">Category</h5>
+            <div class="category-menu">
+                <button type="button" class="filter-btn" (click)="selectAllBtn()">
+                    <span>All</span>
+                </button>
+                <button type="button" class="filter-btn" *ngFor="let item of itemFilters"
+                    (click)="selectRestFilter(item)">
+                    <span class="filter-image">
+                        <img src="../../assets/Images/{{item}}.png">
+                    </span>
+                    <span class="category-menu-btns">{{item}}</span>
+                </button>
+            </div>
+        </div>
+        <common-menu [type]="type" [details]="allRestaurants"></common-menu>
+        <search-filter (sortByEmit)="sortByRestaurant($event)" (allSelectedEmit)="filterByAll($event)"
+            (filterOptionsEmit)="filterByOptions($event)" [searchFilterFlag]="searchFilterFlag"
+            (closeEventEmit)="closeSearchFilter($event)" (searchFilterCountEmit)="searchFilterCount($event)">
+        </search-filter>
+    </div>
+
+</div>

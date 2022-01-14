@@ -1,0 +1,42 @@
+<div class="search-filter-wrapper" [ngClass]="{'show': flag == true,'hide' : flag == false}">
+    <div class="search-filter-inner">
+        <div class="search-filter">
+
+            <div class="search-filter-block">
+                <button type="button" class="close search-close-btn" (click)="closeSearchFilter()">&times;</button>
+                <h4 class="search-filter-heading">Search Filters </h4>
+            </div>
+
+            <div class="search-filter-opt">
+                <h4>Sort By</h4>
+                <span>
+                    <span class="fab fa-hotjar"></span>
+                </span>
+                <button type="button" class="sort-btns" [ngClass]="{'active': isSelected}" (click)="selectSortBy()">
+                    <span [ngClass]="{'activeSort': isSelected}">Open</span>
+                </button>
+            </div>
+
+            <div class="search-filter-opt">
+                <h4>Cuisine</h4>
+                <div class="row filter-btns-section">
+                    <button type="button" class="filter-btns" [ngClass]="{'active activeSort': isallSelected == true}"
+                        (click)="selectAll()">All</button>
+                    <button type="button" class="filter-btns" *ngFor="let item of filterItems"
+                        [ngClass]="{'active': item.ischeck}" (click)="selectCuisine(item)">
+                        <span class="cuisine-btns" [ngClass]="{'activeSort': item.ischeck}">{{item.name}}</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="see-more">
+                <span class="see-more-text">See more</span>
+                <span class="fas fa-chevron-down see-more-icon"></span>
+            </div>
+            <div>
+                <button type="button" class="apply-filter" (click)="applyFilters()">Apply Filters</button>
+            </div>
+
+        </div>
+    </div>
+</div>

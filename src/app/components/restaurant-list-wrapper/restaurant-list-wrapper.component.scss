@@ -1,0 +1,65 @@
+.filter-btn {
+    height: 44px;
+    font-family: Open Sans;
+    background: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #182135;
+    border:none;
+    cursor:pointer;
+    margin-left: 20px;
+}
+
+.filter-image {
+    background: #F7F7F7;
+}
+
+.skeleton {
+    background: linear-gradient(
+      90deg,
+      hsl(210, 15%, 88%),
+      hsl(210, 15%, 95%),
+      hsl(210, 15%, 88%)
+    );
+    background-size: 200%;
+    animation: loader 1s infinite reverse;
+    height: 5em;
+  }
+
+  .animate {
+    animation: animate 1s ease;
+  }
+  @keyframes animate {
+    from {
+      transform: rotateX(20deg);
+      opacity: 0;
+  
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+.loader-height {
+  margin-top: 50px;
+}
+.category-heading {
+  color: #182135;
+  display:inline-block;
+  padding-left:20px
+}
+
+.category-menu {
+  padding-top: 20px;
+}
+
+.category-head {
+  padding-top: 30px;
+}
+
+.category-menu-btns {
+  margin-left:10px
+}

@@ -1,0 +1,107 @@
+.back-btn {
+    background: #503E9D;
+    border-radius: 10px;
+    width:48px;
+    height:48px;
+    cursor: pointer;
+}
+
+.fa-chevron-left {
+    color: #FFFFFF;
+}
+
+.search-form {
+    display: inline;
+    
+}
+ .form-control {
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+.top-filter-btn {
+    background: #503E9D;
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    color:white;
+    margin-left:15px;
+}
+
+.top-cart-btn {
+    background: #FB6D3A;
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    color:white;
+    margin-left:15px;
+}
+
+.badge {
+    position: absolute;
+    margin-top:17px;
+    background: #000000;
+    border-radius: 10px;
+}
+
+.margin-space {
+    margin-left:15px;
+}
+
+.search-box {
+    position:relative;
+    width:380px;
+    top:6px;
+    margin-left:15px;
+}
+
+.search-icon {
+    position: absolute;
+    left:10px;
+    top:10px
+}
+
+.markt-icon {
+    padding:10px
+}
+
+.top-bar {
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+.top-right-section {
+    display:flex;
+}
+
+.top-right-inner {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-left:15px;
+}
+
+.arrow-keys {
+    position:relative;
+    height:54%;
+    margin-left:50px;
+}
+
+.arrow {
+    position: absolute; 
+   
+    right:0;
+    cursor:pointer;
+}
+
+.arrow-up {
+    top: 0;
+}
+.arrow-down {
+    bottom:0;
+}

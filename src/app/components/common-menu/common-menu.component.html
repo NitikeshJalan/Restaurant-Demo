@@ -1,0 +1,42 @@
+<div class="common-menu">
+    <h3 class="commonu-menu-heading">{{type}}</h3>
+
+    <div *ngIf="type && type == 'Restaurants' && details && details.length > 0" class="row space-pad" id="store-items">
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3" *ngFor="let item of details">
+            <div class="rest-menu-list" (click)="openRestaurantDetails(item.id)">
+                <div class="img-container">
+                    <img [src]="item.restaurantImage" class="card-img-top store-img img-list" alt="image">
+                </div>
+                <div>
+                    <div class="card-text d-flex justify-content-between text-capitalize pt-2">
+                        <h5 class="item-name" id="store-item-name">{{item.restaurantName}}</h5>
+                        <span *ngIf="item.isOpen" class="store-item-value rest-status open">Open Now</span>
+                        <span *ngIf="!item.isOpen" class="store-item-value rest-status closed">Closed</span>
+                    </div>
+                    <div class="desc">
+                        {{item.restaurantDescription}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="type && type == 'Menu' && details && details.length > 0" class="row space-pad" id="store-items">
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3" *ngFor="let item of details">
+            <div class="cont-width">
+                <div class="img-container">
+                    <img [src]="item.itemPhoto" class="card-img-top store-img img-list" alt="image">
+                </div>
+                <div>
+                    <div class="card-text d-flex justify-content-between text-capitalize pt-2">
+                        <h5 class="item-name menu-list mr-1" id="store-item-name">{{item.itemName}}</h5>
+                        <h4 class="item-name menu-list" id="store-item-name" style="color:#503E9D;">&#163;
+                            {{item.itemCost}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="details && details.length == 0" class="space-pad">
+        <h6 class="text-center">Sorry No Restaurants Found...!!</h6>
+    </div>
+</div>

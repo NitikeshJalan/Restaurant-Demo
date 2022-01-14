@@ -1,0 +1,14 @@
+<top-bar [type]="type"></top-bar>
+<div *ngIf="showDetailsLoader" id="about" class="skeleton"></div>
+<div *ngIf="!showDetailsLoader">
+    <restaurant-detail [selectedRestaurant]="selectedRestaurant"></restaurant-detail>
+    <div>
+        <span *ngFor="let item of counts | keyvalue">
+            <button type="button" class="filter-btn" [ngClass]="{'active': filterName === item.key}"
+                *ngIf="item.key == 'All'" (click)="filterMenu(item.key)">{{item.key}}</button>
+            <button type="button" class="filter-btn" [ngClass]="{'active': filterName === item.key}"
+                *ngIf="item.key != 'All'" (click)="filterMenu(item.key)">{{item.key}}({{item.value}})</button>
+        </span>
+    </div>
+    <common-menu [type]="type" [details]="allMenus"></common-menu>
+</div>

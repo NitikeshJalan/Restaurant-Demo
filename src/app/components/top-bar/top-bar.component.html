@@ -1,0 +1,31 @@
+<div class="top-bar">
+  <button type="button" class="back-btn" (click)="navigateBack()">
+    <span class="fas fa-chevron-left"></span>
+  </button>
+  <div class="top-right-section">
+    <div class="top-right-inner" *ngIf="type != 'Menu'">
+      <span>
+        <span class="fas fa-store-alt" style="color: #503E9D;"></span>
+        <span class="markt-icon">Da Otto</span>
+      </span>
+      <div class="arrow-keys">
+        <span class="fas fa-chevron-down arrow arrow-down"></span>
+        <span class="fas fa-chevron-up arrow arrow-up"></span>
+      </div>
+    </div>
+    <label *ngIf="type != 'Menu'" class="search-box">
+      <span class="fas fa-search search-icon"></span>
+      <input class="form-control mr-sm-2 pl-5" type="search"
+        placeholder="Search for Restaurants (Press Enter to Search)" aria-label="Search" [(ngModel)]="searchValue"
+        name="search" (keyup.enter)="searchRestaurants()">
+    </label>
+    <button *ngIf="type != 'Menu'" type="button" class="top-filter-btn" (click)="openSearchFilter()">
+      <span class="fas fa-stream"></span>
+      <span *ngIf="count > 0" class="badge badge-dark">{{count}}</span>
+    </button>
+    <button type="button" class="top-cart-btn">
+      <span class="fas fa-shopping-cart"></span>
+      <span *ngIf="type == 'Menu'" class="badge badge-dark">2</span>
+    </button>
+  </div>
+</div>

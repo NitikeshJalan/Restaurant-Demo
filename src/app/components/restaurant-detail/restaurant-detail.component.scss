@@ -1,0 +1,47 @@
+.rest-detail-text {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #626264;
+}
+.margin-space {
+        margin-left:15px
+}
+
+.padding-space {
+        padding-top: 20px;
+}
+.rest-section {
+        width:100%;
+}
+
+.rest-img {
+        border-radius: 40px;
+        padding: 30px;
+        height:90%
+}
+
+.restaurant-detail {
+        display: flex;
+        padding: 10px;
+}
+
+.rest-detail-inner {
+        width:100%;
+        padding:15px
+}
+
+.rest-detail-name {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;color: #182135;
+}
+
+.rest-detail-time {
+        display: flex;
+        align-items: center;
+}

@@ -1,0 +1,25 @@
+<div *ngIf="selectedRestaurant" class="restaurant-detail">
+    <div class="rest-detail-inner">
+        <h3 class="rest-detail-name">{{selectedRestaurant.restaurantName}}</h3>
+        <p class="rest-detail-text ">{{selectedRestaurant.restaurantDescription}}</p>
+
+        <div class="rest-detail-text rest-detail-time">
+            <span class="far fa-clock"></span>
+            <div class="margin-space">
+                <p class="mb-0">{{selectedRestaurant.openingHours.split(',')[0]}},</p>
+                <p class="mb-0">{{selectedRestaurant.openingHours.split(',')[1]}}</p>
+            </div>
+        </div>
+        <div class="rest-detail-text padding-space">
+            <span class="fas fa-phone-alt"></span>
+            <span class="margin-space">{{selectedRestaurant.contactNumber}}</span>
+        </div>
+        <div class="rest-detail-text padding-space">
+            <span class="fas fa-globe"></span>
+            <span class="margin-space">{{selectedRestaurant.websiteUrl}}</span>
+        </div>
+    </div>
+    <div class="rest-section">
+        <img [src]="selectedRestaurant.restaurantImage" alt="restaurant-image" class="rest-section rest-img ">
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.filter-btn {
+    background: #F7F7F7;
+    border-radius: 8px;
+    align-items: center;
+    padding: 8px 16px;
+    position: static;
+    height: 40px;
+    margin-left:20px;
+    border:none;
+    cursor: pointer;
+    color: #626264;
+}
+
+.active {
+    background: #503E9D;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #F7FAFC;
+    border:none;
+}
+
+.skeleton {
+    background: linear-gradient(
+      90deg,
+      hsl(210, 15%, 88%),
+      hsl(210, 15%, 95%),
+      hsl(210, 15%, 88%)
+    );
+    background-size: 200%;
+    animation: loader 1s infinite reverse;
+    height: 5em;
+  }
+
+  .animate {
+    animation: animate 1s ease;
+  }
+  @keyframes animate {
+    from {
+      transform: rotateX(20deg);
+      opacity: 0;
+  
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
